@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Person Profile Full Form</title>
+	<style>
+		td,tr{
+			border: 1px solid black;
+			height: 40px;
+	
+		     }
+
+		th{
+			height: 70px;
+		  }
+
+		table{
+			border-collapse: collapse;
+		     }
+
+	</style>
+</head>
+<body>
+	<div align="center">
+          <form name="regForm" action="regtest.php" method="post" onsubmit="return formValidation()" >
+
+	          <table border="1px solid black" style="width: 500px;">
+		         <tr>
+			        <th colspan="3"> <h2>Person Profile</h2> </th>
+		        </tr>
+		        <tr >
+			        <td >Name</td>
+			        <td ><input type="text" id="name" name="name" value=""></td>
+			        <td ><span id="name_err"></span></td>
+
+		        </tr>
+		        <tr>
+		        	<td>Email</td>
+		        	<td><input type="email" id="email" name="email"></td>
+		        	<td ><span id="email_err"></span></td>
+		        </tr>
+		        <tr>
+		        	<td>Gender</td>
+		        	<td>
+		        		<input type="radio" id="male" name="gender" value="male"> Male
+                        <input type="radio" id="female" name="gender" value="female"> Female
+                        <input type="radio" id="other" name="gender" value="other"> Other 
+		        	</td>
+		        	<td ><span id="gender_err"></span></td>
+		        </tr>
+		        <tr>
+		        	<td>Date of Birth</td>
+		        <td><input style="width: 20px;" type="text" id="day" name="day" value="" maxlength="2">/<input style="width: 20px;" type="text" id="month" name="month" value="" maxlength="2">/<input style="width: 30px;" type="text" id="year" name="year" value="" maxlength="4">(dd/mm/yy)
+		        </td>
+		        	<td ></td>
+		        </tr>
+		        <tr>
+		        	<td>Blood Group</td>
+		        	<td>
+		        		<select id="bloodGroup" name="blood_group" >
+		        		<option value=""></option>	
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="O+">O+</option>
+                        </select>
+		        	</td>
+		        	<td ><span id="blood_err"></span></td>
+		        </tr>
+		        <tr>
+		        	<td>Degree</td>
+		        	<td>
+		        		<input type="checkbox" id="ssc" name="checkbox[]" value=""> SSC 
+                        <input type="checkbox" id="hsc" name="checkbox[]" value="">HSC 
+                        <input type="checkbox" id="bsc" name="checkbox[]" value="">BSC
+		        	</td>
+		        	<td ><span id="degree_err"></span></td>
+		        </tr>
+		        <tr>
+		        	<td>Photo</td>
+		        	<td colspan="2"><input type="file" id="picture" name="picture"></td>
+		        	
+		        </tr>
+		        <tr>
+		        	<td colspan="3"></td>
+		        </tr>
+		        <tr>
+		        	<td align="right" colspan="3">
+		        		<input type="submit" value="Submit">
+		        		<input type="reset" value="Reset" >
+		        	</td>
+		        </tr>
+	        </table>
+</form>
+</div>
+
+<script type="text/javascript" src="form_validation.js"></script>
+</body>
+</html>
